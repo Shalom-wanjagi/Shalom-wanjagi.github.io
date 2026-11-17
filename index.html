@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Shalom Lily Wambui Wanjagi, an emerging professional interested in Economics, data analytics, Chinese-English communication, and social media management.">
+  <meta name="theme-color" content="#10264b">
+  <title>Shalom Lily Wambui Wanjagi | Portfolio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #10264b;
+      --blue: #1d4778;
+      --gold: #d7a52c;
+      --ink: #1b2940;
+      --muted: #596980;
+      --paper: #f6f8fc;
+      --white: #fff;
+      --line: #e2e8f1;
+      --shadow: 0 14px 36px rgba(16, 38, 75, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+    .wrap { width: min(1080px, 92%); margin-inline: auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      font-weight: 850;
+      letter-spacing: .08em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .brand span { color: var(--gold); }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 22px; }
+    .navlinks a {
+      color: #eaf0fa;
+      text-decoration: none;
+      font-size: .92rem;
+    }
+    .navlinks a:hover { color: var(--gold); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0 82px;
+      background: linear-gradient(120deg, #0b1c37, #183b70 76%, #254e7c);
+      color: var(--white);
+    }
+    .hero::after {
+      position: absolute;
+      content: "";
+      width: 390px;
+      height: 390px;
+      right: -120px;
+      top: -150px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+      box-shadow: 0 0 0 55px rgba(255,255,255,.035),
+                  0 0 0 110px rgba(255,255,255,.025);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .eyebrow, .section-label {
+      color: #a77b16;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    .hero .eyebrow { color: #f2cf72; }
+    h1 {
+      max-width: 850px;
+      margin: 16px 0;
+      font-size: clamp(2.7rem, 7vw, 5rem);
+      line-height: 1.04;
+      letter-spacing: -.035em;
+    }
+    .hero-intro {
+      max-width: 720px;
+      margin: 0;
+      color: #e4ebf6;
+      font-size: clamp(1.08rem, 2.4vw, 1.35rem);
+    }
+    .role-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 25px 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+    .role-list li {
+      padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      color: #f3d889;
+      font-size: .9rem;
+      font-weight: 650;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-block;
+      padding: 11px 19px;
+      border: 2px solid transparent;
+      border-radius: 7px;
+      background: var(--gold);
+      color: #162744;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .button:hover { filter: brightness(1.05); }
+    .button.secondary {
+      border-color: rgba(255,255,255,.65);
+      background: transparent;
+      color: var(--white);
+    }
+
+    section { padding: 68px 0; scroll-margin-top: 76px; }
+    h2 {
+      margin: 7px 0 16px;
+      color: var(--navy);
+      font-size: clamp(1.9rem, 4vw, 2.65rem);
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+    .intro { max-width: 850px; color: var(--muted); font-size: 1.06rem; }
+    .soft-section { background: #edf2f8; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .card h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.15rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .card .icon { margin-bottom: 9px; font-size: 1.45rem; }
+    .project-type {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #8c6915;
+      font-size: .73rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .note { margin-top: 12px !important; font-size: .88rem; }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .skills li {
+      padding: 6px 11px;
+      border: 1px solid #dce5f2;
+      border-radius: 999px;
+      background: #e9eff8;
+      color: #19375f;
+      font-size: .9rem;
+      font-weight: 650;
+    }
+
+    .contact-section {
+      background: linear-gradient(125deg, #0b1c37, #173960);
+      color: var(--white);
+    }
+    .contact-section h2 { color: var(--white); }
+    .contact-section p { max-width: 760px; color: #dbe5f2; }
+    .contact-section a:not(.button) { color: #f2cf72; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 18px; margin: 22px 0; }
+    footer { padding: 20px 0; background: #09172d; color: #c3cedd; font-size: .88rem; }
+
+    @media (max-width: 680px) {
+      nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .navlinks { gap: 12px 18px; }
+      .hero { padding: 65px 0; }
+      section { padding: 54px 0; }
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#home">SLWW<span>.</span></a>
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#strengths">Strengths</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-content">
+        <div class="eyebrow">Economics · Analytics · Communication</div>
+        <h1>Shalom Lily<br>Wambui Wanjagi</h1>
+        <p class="hero-intro">
+          An emerging professional bringing curiosity, analytical thinking, and a thoughtful approach to communication.
+        </p>
+        <ul class="role-list" aria-label="Areas of interest">
+          <li>Economics</li>
+          <li>Data Analytics</li>
+          <li>Chinese-English Communication</li>
+          <li>Social Media Management</li>
+        </ul>
+        <div class="actions">
+          <a class="button" href="#contact">Contact me</a>
+          <a class="button secondary" href="#projects">Explore my work</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-label">01 / Profile</div>
+        <h2>Insightful thinking. Clear communication. A drive to grow.</h2>
+        <p class="intro">
+          I am an Economics-focused emerging professional building practical skills in data analytics, Chinese-English communication, and social media management. I am interested in how evidence can inform decisions, how language can connect people across cultures, and how purposeful digital content can engage an audience.
+        </p>
+        <p class="intro">
+          I am seeking an opportunity to contribute, learn from experienced teams, and continue developing through an internship, entry-level role, project, or collaboration.
+        </p>
+      </div>
+    </section>
+
+    <section class="soft-section" id="strengths">
+      <div class="wrap">
+        <div class="section-label">02 / Strengths & interests</div>
+        <h2>Areas I’m developing</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">📈</div>
+            <h3>Economics & research</h3>
+            <p>Interested in economic questions, market awareness, research, and evidence-informed decision-making.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">📊</div>
+            <h3>Data analytics</h3>
+            <p>Building working knowledge of data preparation, analysis, interpretation, and visualization.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">中</div>
+            <h3>Chinese-English communication</h3>
+            <p>Intermediate Chinese proficiency and an interest in translation and cross-cultural communication.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">✦</div>
+            <h3>Social media management</h3>
+            <p>Interested in content planning, audience engagement, brand communication, and digital storytelling.</p>
+          </article>
+        </div>
+
+        <h3 style="margin:30px 0 0;color:var(--navy)">Tools & working knowledge</h3>
+        <ul class="skills">
+          <li>Microsoft Excel</li>
+          <li>Python</li>
+          <li>Google Colab</li>
+          <li>Data analysis</li>
+          <li>Research</li>
+          <li>Chinese — Intermediate</li>
+          <li>Content planning</li>
+          <li>Digital communication</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-label">03 / Portfolio development</div>
+        <h2>Project ideas aligned with my interests</h2>
+        <p class="intro">
+          The following are proposed demonstration projects, not completed client work. They describe the kinds of practical work I am interested in developing.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <span class="project-type">Economics</span>
+            <h3>Company performance analysis</h3>
+            <p>Analyze a sample company’s financial statements, calculate selected ratios, and explain what the results may suggest.</p>
+            <p class="note">Proposed demonstration project · Sample data</p>
+          </article>
+          <article class="card">
+            <span class="project-type">Data analytics</span>
+            <h3>Dataset exploration with Python</h3>
+            <p>Use Excel and Google Colab to prepare a sample dataset, explore trends, and present findings using charts.</p>
+            <p class="note">Proposed demonstration project · Sample dataset</p>
+          </article>
+          <article class="card">
+            <span class="project-type">Language</span>
+            <h3>Chinese-English translation samples</h3>
+            <p>Compile short practice translations with terminology notes and context for a bilingual sample portfolio.</p>
+            <p class="note">Proposed demonstration project · Practice work</p>
+          </article>
+          <article class="card">
+            <span class="project-type">Digital communication</span>
+            <h3>Social media content plan</h3>
+            <p>Draft a sample content calendar with post concepts, audience goals, and simple measures of engagement.</p>
+            <p class="note">Proposed demonstration project · Concept work</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section" id="education">
+      <div class="wrap">
+        <div class="section-label">04 / Education & growth</div>
+        <h2>Learning with purpose</h2>
+        <article class="card">
+          <h3>Academic focus: Economics</h3>
+          <p>
+            My academic focus is Economics. I am continuing to build practical capability in analysis, research, language, and digital communication. Institution, qualification, and dates can be added when provided.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="wrap">
+        <div class="section-label" style="color:#f2cf72">05 / Contact</div>
+        <h2>Let’s connect.</h2>
+        <p>
+          I’m open to internships, entry-level opportunities, collaborative projects, and professional learning experiences in my areas of interest.
+        </p>
+        <p><strong>Shalom Lily Wambui Wanjagi</strong><br>Nairobi, Kenya</p>
+        <div class="contact-links">
+          <a href="mailto:everforever115@gmail.com">everforever115@gmail.com</a>
+          <a href="https://www.linkedin.com/in/shalom-wanjagi-aa8470315/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
+        </div>
+        <a class="button" href="mailto:everforever115@gmail.com?subject=Professional%20opportunity">Email me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Shalom Lily Wambui Wanjagi · Nairobi, Kenya</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
